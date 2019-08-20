@@ -1,0 +1,9 @@
+Translation to-dos:
+
+ - handouts
+ - source code for java & karel
+ - starter code:
+ 	 - import lines
+ 	 - extends --> FrGraphics/FrKarel
+ - examples
+ - ebook autotranslation overrides

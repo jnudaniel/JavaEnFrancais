@@ -3,87 +3,86 @@ import java.awt.Color;
 
 import acm.graphics.GImage;
 
-public class SImagen extends GImage implements SObjeto{
+public class FImage extends GImage implements FObjet{
 
-	public SImagen(String nombreDeArchivo) {
-		super(nombreDeArchivo);
+	public FImage(String nomDuFichier) {
+		super(nomDuFichier);
 	}
 
-	public SImagen(String nombreDeArchivo, double x, double y) {
-		super(nombreDeArchivo, x, y);
+	public FImage(String nomDuFichier, double x, double y) {
+		super(nomDuFichier, x, y);
 	}
 
-	public SImagen(int[][] arregloDePixeles) {
-		super(arregloDePixeles);
+	public FImage(int[][] matriceDePixels) {
+		super(matriceDePixels);
 	}
 
-	public SImagen(int[][] arregloDePixeles, double x, double y) {
-		super(arregloDePixeles, x, y);
+	public FImage(int[][] matriceDePixels, double x, double y) {
+		super(matriceDePixels, x, y);
 	}
 
-	public void guardarImagen(String nombreDeArchivo) {
-		saveImage(nombreDeArchivo);
+	public void enregistrerImage(String nomDuFichier) {
+		saveImage(nomDuFichier);
 	}
 
-	public int[][] darArregloDePixeles() {
+	public int[][] lireMatriceDePixels() {
 		return getPixelArray();
 	}
 
-	public double darX() {
+	public double lireX() {
 		return getX();
 	}
-	public double darY() {
+	public double lireY() {
 		return getY();
 	}
 
 	/* Utilidades de pixeles. */
-	public int crearRGBPixel(int rojo, int verde, int azul) {
-		return createRGBPixel(rojo, verde, azul);
+	public int creerRVBPixel(int rouge, int vert, int bleu) {
+		return createRGBPixel(rouge, vert, bleu);
 	}
-	public int crearRGBPixel(int rojo, int verde, int azul, int alpha) {
-		return createRGBPixel(rojo, verde, azul, alpha);
+	public int creerRVBPixel(int rouge, int vert, int bleu, int transparence) {
+		return createRGBPixel(rouge, vert, bleu, opacite);
 	}
-	public int darAlpha(int pixel) { return getAlpha(pixel); }
-	public int darRojo(int pixel) { return getRed(pixel); }
-	public int darVerde(int pixel) { return getGreen(pixel); }
-	public int darAzul(int pixel) { return getBlue(pixel); }
+	public int lireTransparence(int pixel) { return getAlpha(pixel); }
+	public int lireRouge(int pixel) { return getRed(pixel); }
+	public int lireVert(int pixel) { return getGreen(pixel); }
+	public int lireBleu(int pixel) { return getBlue(pixel); }
 	
 
-	public void moverse(double dx, double dy) {
+	public void deplacer(double dx, double dy) {
 		move(dx, dy);
 	}
-	public void moverse(int dx, int dy) {
+	public void deplacer(int dx, int dy) {
 		move(dx, dy);
 	}
 
-	public void cambiarUbicacion(double i, double j) {
+	public void emplacer(double i, double j) {
 		setLocation(i, j);
 	}
-	public void cambiarUbicacion(int i, int j) {
+	public void emplacer(int i, int j) {
 		setLocation(i, j);
 	}
 
-	public void cambiarColor(Color c) {
+	public void appliquerCouleur(Color c) {
 		setColor(c);
 	}
 	
-	public double darAncho() {
+	public double lireLargeur() {
 		return getWidth();
 	}
 	
-	public double darAlto() {
+	public double lireHauteur() {
 		return getHeight();
 	}
 
-	public void cambiarTamano(double ancho, double alto) {
-		setSize(ancho, alto);
+	public void appliquerTaille(double largeur, double hauteur) {
+		setSize(largeur, hauteur);
 	}
 	
-	
-	public void cambiarVisible(boolean visible) {
+	public void mettreVisible(boolean visible) {
 		setVisible(visible);
 	}
-	public boolean estaVisible() {
+	public boolean estVisible() {
 		return isVisible();
 	}
 

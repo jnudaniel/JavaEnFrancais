@@ -48,18 +48,18 @@ public class SLinea extends GLine implements SObjeto{
 		setColor(c);
 	}
 	
-	public double darAncho() {
+	public double lireLargeur() {
 		return getWidth();
 	}
 	
-	public double darAlto() {
+	public double lireHauteur() {
 		return getHeight();
 	}
 	
-	public void cambiarVisible(boolean visible) {
+	public void mettreVisible(boolean visible) {
 		setVisible(visible);
 	}
-	public boolean estaVisible() {
+	public boolean estVisible() {
 		return isVisible();
 	}
 

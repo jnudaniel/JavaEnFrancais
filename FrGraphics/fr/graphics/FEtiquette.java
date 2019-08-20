@@ -3,73 +3,75 @@ import java.awt.Color;
 
 import acm.graphics.GLabel;
 
-public class SEtiqueta extends GLabel implements SObjeto {
+public class FEtiquette extends GLabel implements FObjet {
 
-	public SEtiqueta(String str) {
+	public FEtiquette(String str) {
 		super(str);
 	}
 	
-	public SEtiqueta(String str, double x, double y) {
+	public FEtiquette(String str, double x, double y) {
 		super(str, x, y);
 	}
 	
-	public double darAscenso() {
+	public double lireHauteur() {
 		return getAscent();
 	}
 	
-	public double darDescenso() {
+	public double lireDescente() {
 		return getDescent();
 	}
 	
 	/* change text label */
-	public void cambiarTexto(String texto) {
-		setLabel(texto);
+	public void ecrireTexteDEtiquette(String texte) {
+		setLabel(texte);
 	}
 	
 	/* fonts */
-	public void cambiarFuente(String fuente) {
-		setFont(fuente);
+	public void appliquerPolice(String police) {
+		setFont(police);
 	}
 
-	public double darX() {
+	public double lireX() {
 		return getX();
 	}
-	public double darY() {
+
+	public double lireY() {
 		return getY();
 	}
 	
 	
-
-	public void moverse(double dx, double dy) {
+	public void deplacer(double dx, double dy) {
 		move(dx, dy);
 	}
-	public void moverse(int dx, int dy) {
+	public void deplacer(int dx, int dy) {
 		move(dx, dy);
 	}
 
-	public void cambiarUbicacion(double i, double j) {
-		setLocation(i, j);
-	}
-	public void cambiarUbicacion(int i, int j) {
+	public void emplacer(double i, double j) {
 		setLocation(i, j);
 	}
 
-	public void cambiarColor(Color c) {
+	public void emplacer(int i, int j) {
+		setLocation(i, j);
+	}
+
+	public void appliquerCouleur(Color c) {
 		setColor(c);
 	}
 	
-	public double darAncho() {
+	public double lireLargeur() {
 		return getWidth();
 	}
 	
-	public double darAlto() {
+	public double lireHauteur() {
 		return getHeight();
 	}
 	
-	public void cambiarVisible(boolean visible) {
+	public void mettreVisible(boolean visible) {
 		setVisible(visible);
 	}
-	public boolean estaVisible() {
+
+	public boolean estVisible() {
 		return isVisible();
 	}
 

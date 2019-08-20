@@ -1,11 +1,9 @@
-package espl;
+package fr;
 import java.awt.Color;
 import java.util.ArrayList;
 
 import acm.program.ConsoleProgram;
 import acm.util.RandomGenerator;
-
-
 
 
 
@@ -34,15 +32,15 @@ public abstract class FrConsole extends ConsoleProgram{
 		println(i);
 	}
 
-	public void imprimirEnLigne(String s) {
+	public void imprimerEnLigne(String s) {
 		print(s);
 	}
 	
-	public void imprimirEnLigne(double d) {
+	public void imprimerEnLigne(double d) {
 		print(d);
 	}
 
-	public void imprimirEnLigne(int i) {
+	public void imprimerEnLigne(int i) {
 		print(i);
 	}
 
@@ -94,19 +92,14 @@ public abstract class FrConsole extends ConsoleProgram{
 		return rg.nextBoolean(p);
 	}
 
-
-/**
-Figure this out
- */
-
-	public ArrayList<String> leerPalabrasDelArchivo(String nombreDeArchivo) {
-		EsLectorDeArchivos lector = new EsLectorDeArchivos(nombreDeArchivo);
-		return lector.leerPalabras();
+	public ArrayList<String> lireFichierParMot(String nomDuFichier) {
+		FrLecteurDeFichier lecteur = new FrLecteurDeFichier(nomDuFichier);
+		return lecteur.lireMots();
 	}
 
-	public ArrayList<String> leerLineasDelArchivo(String nombreDeArchivo) {
-		EsLectorDeArchivos lector = new EsLectorDeArchivos(nombreDeArchivo);
-		return lector.leerLineas();
+	public ArrayList<String> lireFichierParLigne(String nomDuFichier) {
+		FrLecteurDeFichier lecteur = new FrLecteurDeFichier(nomDuFichier);
+		return lecteur.lireLignes();
 	}
 	
 }

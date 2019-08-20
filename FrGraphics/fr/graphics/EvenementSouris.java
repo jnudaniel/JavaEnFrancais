@@ -1,4 +1,4 @@
-package espl;
+package fr;
 
 import java.awt.Component;
 import java.awt.event.MouseEvent;

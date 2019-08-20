@@ -7,122 +7,122 @@ import acm.graphics.*;
 import acm.program.*;
 import acm.util.RandomGenerator;
 
-public abstract class EsGraphics extends GraphicsProgram{
+public abstract class FrGraphics extends GraphicsProgram{
 
 	private RandomGenerator rg = new RandomGenerator();
 
-	/* Agregar y quitar. */
-	public void agregar(SObjeto obj) {
+	/* Ajouter et enlever. */
+	public void ajouter(FObjet obj) {
 		add((GObject)obj);
 	}
 	
-	public void agregar(SObjeto obj, double x, double y) {
+	public void ajouter(FObjet obj, double x, double y) {
 		add((GObject)obj, x, y);
 	}
 	
-	public void quitar(SObjeto obj) {
+	public void enlever(FObjet obj) {
 		remove((GObject)obj);
 	}
 	
-	public void quitarTodo() {
+	public void toutEnlever() {
 		removeAll();
 	}
 
-	public void cambiarFondo(Color c) {
+	public void appliquerCouleurDeFond(Color c) {
 		setBackground(c);
 	}
 	
-	/* Listeners de raton. */
-	public void mouseClicked(MouseEvent e) { mouseClickeado(e); }
-	public void mouseClickeado(MouseEvent e) { /* overload */ }
-	public void mouseMoved(MouseEvent e) { mouseMovido(e); }
-	public void mouseMovido(MouseEvent e) { /* overload */ }
-	public void mouseDragged(MouseEvent e) { mouseArrastrado(e); }
-	public void mouseArrastrado(MouseEvent e) { /* overload */ }
-	public void mouseEntered(MouseEvent e) { mouseEntra(e); }
-	public void mouseEntra(MouseEvent e) { /* overload */ }
-	public void mouseExited(MouseEvent e) { mouseSale(e); }
-	public void mouseSale(MouseEvent e) { /* overload */ }
-	public void mousePressed(MouseEvent e) { mousePulsado(e); }
-	public void mousePulsado(MouseEvent e) { /* overload */ }
-	public void mouseReleased(MouseEvent e) { mouseSoltado(e); }
-	public void mouseSoltado(MouseEvent e) { /* overload */ }
+	/* Ecouteurs de souris */
+	public void mouseClicked(MouseEvent e) { sourisCliquee(e); }
+	public void sourisCliquee(MouseEvent e) { /* overload */ }
+	public void mouseMoved(MouseEvent e) { sourisDeplacee(e); }
+	public void sourisDeplacee(MouseEvent e) { /* overload */ }
+	public void mouseDragged(MouseEvent e) { sourisGlissee(e); }
+	public void sourisGlissee(MouseEvent e) { /* overload */ }
+	public void mouseEntered(MouseEvent e) { sourisEntree(e); }
+	public void sourisEntree(MouseEvent e) { /* overload */ }
+	public void mouseExited(MouseEvent e) { sourisSortie(e); }
+	public void sourisSortie(MouseEvent e) { /* overload */ }
+	public void mousePressed(MouseEvent e) { sourisAppuyee(e); }
+	public void sourisAppuyee(MouseEvent e) { /* overload */ }
+	public void mouseReleased(MouseEvent e) { sourisRelachee(e); }
+	public void sourisRelachee(MouseEvent e) { /* overload */ }
 
-	public void esperarClic() {
+	public void attendreClic() {
 		waitForClick();
 	}
 	
-	public void agregarMouseListeners() {
+	public void ajouterCapteursDeSouris() {
 		addMouseListeners();
 	}
 
-	/* Ancho y alto. */
-	public double darAncho() { return getWidth(); }
-	public double darAlto() { return getHeight(); }
+	/* Largeur et hauteur */
+	public double lireLargeur() { return getWidth(); }
+	public double lireHauteur() { return getHeight(); }
 	
-	public SObjeto darObjetoA(double x, double y) {
-		return (SObjeto)getElementAt(x, y);
+	public FObjet capterObjetA(double x, double y) {
+		return (FObjet)getElementAt(x, y);
 	}
 	
-	/* pausa */
-	public void pausa(double ms) {
+	/* pause */
+	public void pause(double ms) {
 		pause(ms);
 	}
 
-	/* Cosas de EsConsole se necesita aqui tambien. */
-	public void imprimir(String s) {
+	/* Quelques outils de FrConsole dont nous avons également besoin ici */
+	public void imprimer(String s) {
 		println(s);
 	}
 	
-	public void imprimir(double d) {
+	public void imprimer(double d) {
 		println(d);
 	}
 
-	public void imprimir(int i) {
+	public void imprimer(int i) {
 		println(i);
 	}
 
-	public void imprimirEnLinea(String s) {
+	public void imprimerEnLigne(String s) {
 		print(s);
 	}
 	
-	public void imprimirEnLinea(double d) {
+	public void imprimerEnLigne(double d) {
 		print(d);
 	}
 
-	public void imprimirEnLinea(int i) {
+	public void imprimerEnLigne(int i) {
 		print(i);
 	}
 	
-	public int intAleatorio() {
+	public int intAleatoire() {
 		return rg.nextInt();
 	}
 	
-	public int intAleatorio(int max) {
+	public int intAleatoire(int max) {
 		return rg.nextInt(max);
 	}
 	
-	public int intAleatorio(int min, int max) {
+	public int intAleatoire(int min, int max) {
 		return rg.nextInt(min, max);
 	}
 	
-	public double doubleAleatorio() {
+	public double doubleAleatoire() {
 		return rg.nextDouble();
 	}
 	
-	public double doubleAleatorio(double min, double max) {
+	public double doubleAleatoire(double min, double max) {
 		return rg.nextDouble(min, max);
 	}
 	
-	public Color colorAleatorio() {
+	public Color couleurAleatoire() {
 		return rg.nextColor();
 	}
 	
-	public boolean booleanAleatorio() {
+	public boolean booleanAleatoire() {
 		return rg.nextBoolean();
 	}
 	
-	public boolean booleanAleatorio(double p) {
+	public boolean booleanAleatoire(double p) {
 		return rg.nextBoolean(p);
 	}
 }

@@ -1,7 +1,10 @@
 Translation to-dos:
 
  - handouts
- - source code for java & karel
+ - source code
+ 	- graphics java
+ 	- console java
+ 	- karel
  - starter code:
  	 - import lines
  	 - extends --> FrGraphics/FrKarel

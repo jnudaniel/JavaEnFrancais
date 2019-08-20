@@ -3,126 +3,126 @@ import java.awt.Color;
 import stanford.karel.SuperKarel;
 
 /**
- * CUIDADO: Por favor no cambiar este codigo.  No necesitas 
- * leer/modificar este archivo. Este archivo nos permite 
- * traducir las librerias de Karel a nombres de metodos en Español
+ * ATTENTION: Merci de ne pas changer ce code.  Vous n'avez pas
+ * besoin de lire ou modifier ce fichier. Ce fichier nous permet
+ * de traduire les bibliothèques Karel en français.
  */
-public abstract class EsKarel extends SuperKarel {
+public abstract class FrKarel extends SuperKarel {
 
 	
 	/********************************************** 
-	 *          código privado                    *
+	 *              code privé                    *
 	 **********************************************/
 	
 	
 	
-	public void moverse() {
+	public void avancer() {
 		move();
 	}
 	
-	public void girarIzquierda() {
+	public void tournerAGauche() {
 		turnLeft();
 	}
 	
-	public void mediaVuelta() {
+	public void faireDemiTour() {
 		turnAround();
 	}
 	
-	public void ponerCono() {
+	public void poserJeton() {
 		putBeeper();
 	}
 	
-	public void recogerCono() {
+	public void ramasserJeton() {
 		pickBeeper();
 	}
 	
-	public void pintarEsquina(Color c) {
+	public void peindreCoin(Color c) {
 		paintCorner(c);
 	}
 	
 	/** Conditions **/
 	
-	public boolean frenteDespejado() {
+	public boolean devantDegage() {
 		return frontIsClear();
 	}
 	
-	public boolean frenteBloqueado() {
+	public boolean devantBloque() {
 		return frontIsBlocked();
 	}
 	
-	public boolean izquierdaDespejada() {
+	public boolean gaucheDegagee() {
 		return leftIsClear();
 	}
 	
-	public boolean izquierdaBloqueada() {
+	public boolean gaucheBloquee() {
 		return leftIsBlocked();
 	}
 	
-	public boolean derechaDespejada() {
+	public boolean droiteDegagee() {
 		return rightIsClear();
 	}
 	
-	public boolean derechaBloqueada() {
+	public boolean droiteBloquee() {
 		return rightIsBlocked();
 	}
 	
-	public boolean conosPresentes() {
+	public boolean jetonsPresents() {
 		return beepersPresent();
 	}
 	
-	public boolean conosAusentes() {
+	public boolean aucunJetonPresent() {
 		return noBeepersPresent();
 	}
 	
-	public boolean bolsaSinConos() {
+	public boolean aucunJetonEnPoche() {
 		return noBeepersInBag();
 	}
 	
-	public boolean bolsaConConos() {
+	public boolean jetonsEnPoche() {
 		return beepersInBag();
 	}
 	
-	public boolean rumboNorte() {
+	public boolean faceAuNord() {
 		return facingNorth();
 	}
 	
-	public boolean sinRumboNorte() {
+	public boolean pasFaceAuNord() {
 		return notFacingNorth();
 	}
 	
-	public boolean rumboEste() {
+	public boolean faceALEst() {
 		return facingEast();
 	}
 	
-	public boolean sinRumboEste() {
+	public boolean pasFaceALEst() {
 		return notFacingEast();
 	}
 	
-	public boolean rumboSur() {
+	public boolean faceAuSud() {
 		return facingSouth();
 	}
 	
-	public boolean sinRumboSur() {
+	public boolean pasFaceAuSud() {
 		return notFacingSouth();
 	}
 	
-	public boolean rumboOeste() {
+	public boolean faceALOuest() {
 		return facingWest();
 	}
 	
-	public boolean sinRumboOeste() {
+	public boolean pasFaceALOuest() {
 		return notFacingWest();
 	}
 	
-	public boolean aleatorio() {
+	public boolean aleatoire() {
 		return random();
 	}
 	
-	public boolean aleatorio(double p) {
-		return aleatorio(p);
+	public boolean aleatoire(double p) {
+		return random(p);
 	}
 
-	public boolean colorEsquinaEs(Color c) {
+	public boolean couleurDuCoinEst(Color c) {
 		return cornerColorIs(c);
 	}
 	

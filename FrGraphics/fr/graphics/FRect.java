@@ -3,65 +3,65 @@ import java.awt.Color;
 
 import acm.graphics.GRect;
 
-public class SRect extends GRect implements SObjeto{
+public class FRect extends GRect implements SObjeto{
 
-	public SRect(double ancho, double alto) {
-		super(ancho, alto);
+	public FRect(double largeur, double hauteur) {
+		super(largeur, hauteur);
 	}
 	
-	public SRect(double x, double y, double ancho, double alto) {
-		super(x, y, ancho, alto);
+	public FRect(double x, double y, double largeur, double hauteur) {
+		super(x, y, largeur, hauteur);
 	}
 
-	public double darX() {
+	public double lireX() {
 		return getX();
 	}
 
-	public double darY() {
+	public double lireY() {
 		return getY();
 	}
 
-	public void moverse(double dx, double dy) {
+	public void deplacer(double dx, double dy) {
 		move(dx, dy);
 	}
 
-	public void cambiarRelleno(boolean b) {
+	public void remplir(boolean b) {
 		setFilled(b);
 	}
 
-	public boolean estaRelleno() {
+	public boolean estRempli() {
 		return isFilled();
 	}
 
-	public void cambiarColorRelleno(Color c) {
+	public void appliquerCouleurDeRemplissage(Color c) {
 		setFillColor(c);
 	}
 
-	public void cambiarUbicacion(double i, double j) {
+	public void emplacer(double i, double j) {
 		setLocation(i, j);
 	}
 
-	public void cambiarColor(Color c) {
+	public void appliquerCouleur(Color c) {
 		setColor(c);
 	}
 	
-	public double darAncho() {
+	public double lireLargeur() {
 		return getWidth();
 	}
 	
-	public double darAlto() {
+	public double lireHauteur() {
 		return getHeight();
 	}
 
-	public void cambiarTamano(double ancho, double alto) {
-		setSize(ancho, alto);
+	public void appliquerTaille(double largeur, double hauteur) {
+		setSize(largeur, hauteur);
 	}
 
-	public void cambiarVisible(boolean visible) {
+	public void mettreVisible(boolean visible) {
 		setVisible(visible);
 	}
 
-	public boolean estaVisible() {
+	public boolean estVisible() {
 		return isVisible();
 	}
 	

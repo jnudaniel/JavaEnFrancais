@@ -1,12 +1,48 @@
 Translation to-dos:
 
- - handouts
- - source code
+ - handouts - Lisa
+ - source code DONE
  	- graphics java
  	- console java
  	- karel
- - starter code:
+ - starter code - Lisa
  	 - import lines
  	 - extends --> FrGraphics/FrKarel
+ - Karel starter project - Julia
  - examples
- - ebook autotranslation overrides
+ - ebook autotranslation overrides - Julia
+
+
+
+ FRect a = new FRect(0, 50, 20, 20);
+		a.appliquerCouleur(Color.RED);
+		System.out.println("applied red");
+		a.remplir(true);
+		a.appliquerCouleurDeRemplissage(Color.GREEN);
+		System.out.println("filled green");
+		ajouter(a);
+		System.out.println("added square");
+		pause(1000);
+		a.deplacer(100, 100);
+		a.remplir(false);
+		a.appliquerTaille(10, 10);
+		System.out.println("moved");
+		pause(100);
+		ajouterCapteursDeSouris();
+		System.out.println("added mouse listeners");
+	}
+
+	public void sourisCliquee(EvenementSouris e) {
+		System.out.println("clicked");
+		FOvale b = new FOvale(30, 30);
+		b.remplir(true);
+		b.appliquerCouleur(Color.CYAN);
+		ajouter(b, e.lireX(), e.lireY());
+		System.out.println("done clicked");
+	}
+	
+	public void sourisSortie(EvenementSouris e) {
+		System.out.println("exited");
+		toutEnlever();
+		System.out.println("done exited");
+	}

@@ -80,7 +80,7 @@ public abstract class FrConsole extends ConsoleProgram{
 		return rg.nextDouble(min, max);
 	}
 	
-	public Color colorAleatoire() {
+	public Color couleurAleatoire() {
 		return rg.nextColor();
 	}
 	

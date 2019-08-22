@@ -33,20 +33,20 @@ public abstract class FrGraphics extends GraphicsProgram{
 	}
 	
 	/* Ecouteurs de souris */
-	public void mouseClicked(MouseEvent e) { sourisCliquee(e); }
-	public void sourisCliquee(MouseEvent e) { /* overload */ }
-	public void mouseMoved(MouseEvent e) { sourisDeplacee(e); }
-	public void sourisDeplacee(MouseEvent e) { /* overload */ }
-	public void mouseDragged(MouseEvent e) { sourisGlissee(e); }
-	public void sourisGlissee(MouseEvent e) { /* overload */ }
-	public void mouseEntered(MouseEvent e) { sourisEntree(e); }
-	public void sourisEntree(MouseEvent e) { /* overload */ }
-	public void mouseExited(MouseEvent e) { sourisSortie(e); }
-	public void sourisSortie(MouseEvent e) { /* overload */ }
-	public void mousePressed(MouseEvent e) { sourisAppuyee(e); }
-	public void sourisAppuyee(MouseEvent e) { /* overload */ }
-	public void mouseReleased(MouseEvent e) { sourisRelachee(e); }
-	public void sourisRelachee(MouseEvent e) { /* overload */ }
+	public void mouseClicked(MouseEvent e) { sourisCliquee(new EvenementSouris(e)); }
+	public void sourisCliquee(EvenementSouris e) { /* overload */ }
+	public void mouseMoved(MouseEvent e) { sourisDeplacee(new EvenementSouris(e)); }
+	public void sourisDeplacee(EvenementSouris e) { /* overload */ }
+	public void mouseDragged(MouseEvent e) { sourisGlissee(new EvenementSouris(e)); }
+	public void sourisGlissee(EvenementSouris e) { /* overload */ }
+	public void mouseEntered(MouseEvent e) { sourisEntree(new EvenementSouris(e)); }
+	public void sourisEntree(EvenementSouris e) { /* overload */ }
+	public void mouseExited(MouseEvent e) { sourisSortie(new EvenementSouris(e)); }
+	public void sourisSortie(EvenementSouris e) { /* overload */ }
+	public void mousePressed(MouseEvent e) { sourisAppuyee(new EvenementSouris(e)); }
+	public void sourisAppuyee(EvenementSouris e) { /* overload */ }
+	public void mouseReleased(MouseEvent e) { sourisRelachee(new EvenementSouris(e)); }
+	public void sourisRelachee(EvenementSouris e) { /* overload */ }
 
 	public void attendreClic() {
 		waitForClick();

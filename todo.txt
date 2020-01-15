@@ -5,12 +5,12 @@ Translation to-dos:
  	- graphics java
  	- console java
  	- karel
- - starter code - Lisa
+ - starter code - Lisa (oops Julia also did this, it's done in NouveauProjetJava.zip)
  	 - import lines
  	 - extends --> FrGraphics/FrKarel
- - Karel starter project - Julia
+ - Karel starter project - Julia DONE
  - examples
- - ebook autotranslation overrides - Julia
+ - ebook autotranslation overrides - Julia DONE
 
 
 
